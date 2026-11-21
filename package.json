@@ -1,0 +1,13 @@
+{
+  "name": "webmcp-1-formacao",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Portal estático da Formação WebMCP — do Zero ao Expert.",
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

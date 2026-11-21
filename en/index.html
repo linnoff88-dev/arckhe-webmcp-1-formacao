@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="WebMCP training from zero to expert, with a readiness assessment, four phases, and a final project." name="description"/>
+<meta content="webmcp-zero-expert" name="inema-course"/>
+<script>
+    (function () {
+      try {
+        var p = JSON.parse(localStorage.getItem('inema.prefs') || '{}');
+        var d = document.documentElement;
+        var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
+        if (dark) d.classList.add('dark'); else d.classList.remove('dark');
+        if (p.theme && p.theme !== 'inema-dark' && p.theme !== 'claro') d.setAttribute('data-theme', p.theme);
+        if (p.fontScale) d.style.setProperty('--fs-root', p.fontScale + '%');
+      } catch (e) { document.documentElement.classList.add('dark'); }
+    })();
+  </script>
+<title>WebMCP Training — Websites and Agents from Zero to Expert</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    };
+  </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<link href="../assets/learn.css" rel="stylesheet"/>
+<script data-inema-manifest="" type="application/json">
+  {
+    "course": "webmcp-zero-expert",
+    "tracks": [
+      { "n": "1", "title": "WebMCP Builder", "modules": [
+        { "id": "1-1", "title": "WebMCP, MCP e Web agêntica", "topics": 6, "href": "https://inematds.github.io/webmcp-2-builder/curso/builder/modulo-1-1.html" },
+        { "id": "1-2", "title": "Ambiente de desenvolvimento", "topics": 6, "href": "https://inematds.github.io/webmcp-2-builder/curso/builder/modulo-1-2.html" },
+        { "id": "1-3", "title": "API declarativa experimental", "topics": 6, "href": "https://inematds.github.io/webmcp-2-builder/curso/builder/modulo-1-3.html" },
+        { "id": "1-4", "title": "API imperativa", "topics": 6, "href": "https://inematds.github.io/webmcp-2-builder/curso/builder/modulo-1-4.html" }
+      ]},
+      { "n": "2", "title": "WebMCP Integrator", "modules": [
+        { "id": "2-1", "title": "Boas ferramentas", "topics": 6, "href": "https://inematds.github.io/webmcp-3-integrator/curso/integrator/modulo-2-1.html" },
+        { "id": "2-2", "title": "Estado, erros e recuperação", "topics": 6, "href": "https://inematds.github.io/webmcp-3-integrator/curso/integrator/modulo-2-2.html" },
+        { "id": "2-3", "title": "Sites existentes", "topics": 6, "href": "https://inematds.github.io/webmcp-3-integrator/curso/integrator/modulo-2-3.html" },
+        { "id": "2-4", "title": "Frameworks modernos", "topics": 6, "href": "https://inematds.github.io/webmcp-3-integrator/curso/integrator/modulo-2-4.html" }
+      ]},
+      { "n": "3", "title": "WebMCP Agent Developer", "modules": [
+        { "id": "3-1", "title": "Descoberta de ferramentas", "topics": 6, "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-1.html" },
+        { "id": "3-2", "title": "Execução de ferramentas", "topics": 6, "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-2.html" },
+        { "id": "3-3", "title": "Cross-origin e permissões", "topics": 6, "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-3.html" },
+        { "id": "3-4", "title": "Loop conversacional", "topics": 6, "href": "https://inematds.github.io/webmcp-4-agent-developer/curso/agent/modulo-3-4.html" }
+      ]},
+      { "n": "4", "title": "WebMCP Expert", "modules": [
+        { "id": "4-1", "title": "Segurança", "topics": 6, "href": "https://inematds.github.io/webmcp-5-expert/curso/expert/modulo-4-1.html" },
+        { "id": "4-2", "title": "WebMCP, backend e MCP", "topics": 6, "href": "https://inematds.github.io/webmcp-5-expert/curso/expert/modulo-4-2.html" },
+        { "id": "4-3", "title": "Evals e observabilidade", "topics": 6, "href": "https://inematds.github.io/webmcp-5-expert/curso/expert/modulo-4-3.html" },
+        { "id": "4-4", "title": "Produção e governança", "topics": 6, "href": "https://inematds.github.io/webmcp-5-expert/curso/expert/modulo-4-4.html" }
+      ]}
+    ]
+  }
+  </script>
+<link href="https://inematds.github.io/webmcp-1-formacao/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/webmcp-1-formacao/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/webmcp-1-formacao/es/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="./" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../es/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<!--
+  THESIS: A formação começa medindo o site real; recusa a landing genérica que vende conteúdo antes de mostrar o mecanismo.
+  OWN-WORLD: Dark INEMA, âmbar de decisão, ciano de fluxo, linhas técnicas e painéis sem sombra pesada.
+  STORY: O visitante entende a jornada, diagnostica uma URL e entra na fase correta com evidência.
+  FIRST VIEWPORT: Promessa e ação à esquerda; fluxo site→diagnóstico→quatro fases→hub em SVG operacional à direita.
+  FORM: Portal técnico de formação dentro do mundo vinculante formato-curso-v2; seed key: pinned-inema-v2.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+<a class="skip" href="#conteudo">Skip to content</a>
+<nav aria-label="Main navigation" class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center min-h-16 gap-4">
+<div class="flex items-center gap-4 min-w-0">
+<a aria-label="WebMCP Training — start" class="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 flex-shrink-0" href="index.html">
+<svg aria-hidden="true" class="w-7 h-7" fill="none" viewbox="0 0 28 28">
+<path d="M5 7.5h8l3 3h7v10H5z" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>
+<circle cx="9" cy="15.5" fill="currentColor" r="1.5"></circle><circle cx="19" cy="15.5" fill="#38bdf8" r="1.5"></circle>
+<path d="M10.5 15.5h7" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+<span class="font-bold sm:hidden">WM</span>
+<span class="font-bold hidden sm:inline xl:inline">WebMCP Training</span>
+</a>
+<span class="text-neutral-600 hidden sm:inline">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium hidden sm:inline" href="https://inema.club" rel="noreferrer" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center gap-1 sm:gap-2">
+<div class="hidden lg:flex items-center gap-1">
+<a class="px-3 py-2 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10" href="#builder">Builder</a>
+<a class="px-3 py-2 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10" href="#integrator">Integrator</a>
+<a class="px-3 py-2 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10" href="#agent-developer">Agent</a>
+<a class="px-3 py-2 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10" href="#expert">Expert</a>
+</div>
+<a class="hidden md:inline-flex px-3 py-2 rounded-lg text-sm font-semibold text-sky-400 bg-sky-500/10 hover:bg-sky-500/20" href="https://webmcp.inema.pro/">Readiness</a>
+<button aria-label="Open my learning journey" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-neutral-300 hover:text-neutral-100" data-inema-journey-open="" type="button">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 19V8m6 11V4m6 15v-7m4 7H2"></path></svg>
+<span class="hidden xl:inline text-sm">My journey</span>
+<span class="inema-journey-badge" data-count="0" data-inema-journey-badge=""></span>
+</button>
+<div class="relative">
+<button aria-expanded="false" aria-label="Adjust appearance" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" data-inema-appearance-toggle="[data-inema-appearance]" type="button">
+<svg aria-hidden="true" class="w-5 h-5 text-neutral-300" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 0 18z"></path></svg>
+</button>
+<div aria-label="Appearance preferences" class="inema-appearance-pop right-0 mt-3" data-inema-appearance="">
+<p class="text-sm font-semibold mb-2">Theme</p>
+<div class="inema-segment"><button data-inema-set-theme="inema-dark">Dark</button><button data-inema-set-theme="claro">Light</button><button data-inema-set-theme="sepia">Sepia</button><button data-inema-set-theme="foco">Focus</button><button data-inema-set-theme="contraste">Contrast</button></div>
+<p class="text-sm font-semibold mt-4 mb-2">Size</p>
+<div class="inema-segment"><button data-inema-set-fontscale="100">A</button><button data-inema-set-fontscale="112">A+</button><button data-inema-set-fontscale="125">A++</button></div>
+</div>
+</div>
+<button aria-label="Toggle light and dark themes" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600" id="theme-toggle">
+<svg aria-hidden="true" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg aria-hidden="true" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm3 1h-1a1 1 0 110-2h1a1 1 0 110 2zM4 11H3a1 1 0 110-2h1a1 1 0 110 2z"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo">
+<section class="hero-shell border-b border-dark-600">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-[0.9fr_1.1fr] gap-14 items-center">
+<div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.035em] leading-[1.02] max-w-3xl">
+            Does your site already know how to talk to agents?
+          </h1>
+<p class="text-lg sm:text-xl text-neutral-300 mt-7 max-w-2xl leading-relaxed">
+            Learn to turn web interfaces into structured tools, build the agent that operates them, and publish everything with security, evals, and fallback.
+          </p>
+<div class="flex flex-col sm:flex-row justify-start gap-3 mt-9">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-gray-950 font-bold hover:bg-yellow-300 transition-colors" href="https://webmcp.inema.pro/">
+              Analyze my site
+              <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg>
+</a>
+<a class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl border border-dark-600 bg-dark-800 text-neutral-200 font-semibold hover:bg-dark-700 transition-colors" href="#fases">Explore the four phases</a>
+</div>
+<div aria-label="Training progress" aria-valuemax="100" aria-valuemin="0" class="mt-10 max-w-xl" data-inema-meter="curso" role="progressbar">
+<div class="flex justify-between text-sm mb-2"><span class="text-neutral-400">Your journey</span><span><span data-inema-meter-frac="">0 of 96</span> · <span data-inema-meter-pct="">0%</span></span></div>
+<div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+</div>
+</div>
+<div class="rounded-2xl border border-sky-500/30 bg-dark-900/40 p-3 sm:p-4 overflow-hidden">
+<svg aria-label="A site is analyzed by WebMCP Readiness, goes through four training phases, and reaches the Agent Hub" class="w-full h-auto" role="img" viewbox="0 0 920 520">
+<defs>
+<filter height="180%" id="landing-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="28" id="landing-grid" patternunits="userSpaceOnUse" width="28"><circle cx="1.2" cy="1.2" fill="#38bdf8" opacity=".12" r="1.2"></circle></pattern>
+<marker id="landing-arrow" markerheight="8" markerwidth="8" orient="auto" refx="6.5" refy="4"><path d="M0 0 8 4 0 8 2.2 4Z" fill="#38bdf8"></path></marker>
+</defs>
+<rect fill="url(#landing-grid)" height="520" width="920"></rect>
+<path d="M190 260H305" marker-end="url(#landing-arrow)" opacity=".55" stroke="#38bdf8" stroke-width="1.8"></path>
+<path d="M475 260H560" marker-end="url(#landing-arrow)" opacity=".55" stroke="#38bdf8" stroke-width="1.8"></path>
+<path d="M730 260H805" marker-end="url(#landing-arrow)" opacity=".55" stroke="#38bdf8" stroke-width="1.8"></path>
+<g filter="url(#landing-glow)"><rect fill="#1f1604" height="110" rx="16" stroke="#facc15" stroke-width="2" width="155" x="35" y="205"></rect></g>
+<text fill="#facc15" font-family="Inter,sans-serif" font-size="20" font-weight="600" text-anchor="middle" x="112" y="247">Your website</text>
+<text fill="#d1d5db" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="112" y="274">URL + current interface</text>
+<rect fill="#0e1b26" height="150" rx="16" stroke="#38bdf8" stroke-width="2" width="170" x="305" y="185"></rect>
+<text fill="#38bdf8" font-family="Inter,sans-serif" font-size="19" font-weight="600" text-anchor="middle" x="390" y="229">Readiness</text>
+<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="390" y="254">discovers · classifies</text>
+<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="390" y="277">explains · recommends</text>
+<rect fill="#263244" height="5" rx="2.5" width="104" x="338" y="297"></rect><rect fill="#38bdf8" height="5" rx="2.5" width="74" x="338" y="297"></rect>
+<g font-family="Inter,sans-serif" font-size="12" font-weight="600">
+<rect fill="#0e2018" height="62" rx="13" stroke="#34d399" stroke-width="2" width="170" x="560" y="100"></rect><text fill="#34d399" text-anchor="middle" x="645" y="137">1 · Builder</text>
+<rect fill="#0e1622" height="62" rx="13" stroke="#60a5fa" stroke-width="2" width="170" x="560" y="185"></rect><text fill="#60a5fa" text-anchor="middle" x="645" y="222">2 · Integrator</text>
+<rect fill="#1a1230" height="62" rx="13" stroke="#c084fc" stroke-width="2" width="170" x="560" y="270"></rect><text fill="#c084fc" text-anchor="middle" x="645" y="307">3 · Agent Developer</text>
+<rect fill="#1f1604" height="62" rx="13" stroke="#fbbf24" stroke-width="2" width="170" x="560" y="355"></rect><text fill="#fbbf24" text-anchor="middle" x="645" y="392">4 · Expert</text>
+</g>
+<path d="M520 260C545 260 542 131 560 131M520 260C545 260 542 216 560 216M520 260C545 260 542 301 560 301M520 260C545 260 542 386 560 386" fill="none" opacity=".5" stroke="#38bdf8" stroke-width="1.8"></path>
+<g filter="url(#landing-glow)"><rect fill="#0e1b26" height="110" rx="16" stroke="#38bdf8" stroke-width="2" width="80" x="805" y="205"></rect></g>
+<text fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="600" text-anchor="middle" x="845" y="249">Agent</text>
+<text fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="600" text-anchor="middle" x="845" y="270">Hub</text>
+<circle cx="845" cy="291" fill="#34d399" r="4"></circle>
+</svg>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" id="fases">
+<div class="grid lg:grid-cols-[0.72fr_1.28fr] gap-14">
+<div class="lg:sticky lg:top-24 self-start">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.025em]">Four phases. One working system at the end.</h2>
+<p class="text-neutral-400 mt-5 leading-relaxed max-w-xl">Each phase ends with an executable deliverable. Your progress is saved, the gate is validated, and your learning journey carries over automatically to the next phase.</p>
+<div class="bg-dark-800 border border-dark-600 rounded-xl p-5 mt-8">
+<p class="text-sm text-neutral-400">Total workload</p>
+<p class="text-2xl font-bold mt-1">80 hours · 12 weeks</p>
+<div class="signal-line my-4"></div>
+<p class="text-sm text-neutral-300">8h fundamentals · 48h training · 24h final project</p>
+</div>
+</div>
+<div class="phase-rail space-y-6">
+<article class="grid grid-cols-[3rem_1fr] gap-5" id="builder">
+<span class="phase-node w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">1</span>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="flex flex-wrap justify-between gap-3"><h3 class="text-2xl font-bold">WebMCP Builder</h3><span class="text-sm text-emerald-400">Modules 1–4</span></div>
+<p class="text-neutral-400 mt-3">Instrument forms and JavaScript functions without disrupting the human experience.</p>
+<div class="grid sm:grid-cols-2 gap-x-6 gap-y-2 mt-5 text-sm text-neutral-300"><span>Declarative API</span><span>Imperative API</span><span>Feature detection</span><span>Structured responses</span></div>
+<p class="mt-5 text-sm text-emerald-400">Deliverable: a site with discoverable, executable tools.</p>
+<a class="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-emerald-400 hover:text-emerald-300" href="https://inematds.github.io/webmcp-2-builder/">Open the WebMCP Builder course<svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></a>
+</div>
+</article>
+<article class="grid grid-cols-[3rem_1fr] gap-5" id="integrator">
+<span class="phase-node w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">2</span>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="flex flex-wrap justify-between gap-3"><h3 class="text-2xl font-bold">WebMCP Integrator</h3><span class="text-sm text-blue-400">Modules 5–8</span></div>
+<p class="text-neutral-400 mt-3">Migrate real user journeys with small tools, consistent state, and recovery.</p>
+<div class="grid sm:grid-cols-2 gap-x-6 gap-y-2 mt-5 text-sm text-neutral-300"><span>Tool catalog</span><span>State and idempotency</span><span>Existing sites</span><span>React and Angular</span></div>
+<p class="mt-5 text-sm text-blue-400">Deliverable: a real site migrated with progressive enhancement.</p>
+<a class="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-blue-400 hover:text-blue-300" href="https://inematds.github.io/webmcp-3-integrator/">Open the WebMCP Integrator course<svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></a>
+</div>
+</article>
+<article class="grid grid-cols-[3rem_1fr] gap-5" id="agent-developer">
+<span class="phase-node w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">3</span>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="flex flex-wrap justify-between gap-3"><h3 class="text-2xl font-bold">WebMCP Agent Developer</h3><span class="text-sm text-purple-400">Modules 9–12</span></div>
+<p class="text-neutral-400 mt-3">Build the agent that discovers schemas, chooses tools, and continues the conversation.</p>
+<div class="grid sm:grid-cols-2 gap-x-6 gap-y-2 mt-5 text-sm text-neutral-300"><span>getTools()</span><span>executeTool()</span><span>Cross-origin</span><span>Conversational loop</span></div>
+<p class="mt-5 text-sm text-purple-400">Deliverable: a vendor-independent agent operating the site.</p>
+<a class="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-purple-400 hover:text-purple-300" href="https://inematds.github.io/webmcp-4-agent-developer/">Open the WebMCP Agent Developer course<svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></a>
+</div>
+</article>
+<article class="grid grid-cols-[3rem_1fr] gap-5" id="expert">
+<span class="phase-node w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">4</span>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="flex flex-wrap justify-between gap-3"><h3 class="text-2xl font-bold">WebMCP Expert</h3><span class="text-sm text-amber-400">Modules 13–16</span></div>
+<p class="text-neutral-400 mt-3">Protect, evaluate, observe, and publish an integration that stands up to the real world.</p>
+<div class="grid sm:grid-cols-2 gap-x-6 gap-y-2 mt-5 text-sm text-neutral-300"><span>Security and policies</span><span>WebMCP + MCP</span><span>Evals</span><span>Governance</span></div>
+<p class="mt-5 text-sm text-amber-400">Deliverable: a solution ready to publish, with confirmation and observability.</p>
+<a class="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-amber-400 hover:text-amber-300" href="https://inematds.github.io/webmcp-5-expert/">Open the WebMCP Expert course<svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="border-y border-dark-600 bg-dark-800/40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
+<div class="readiness-preview relative overflow-hidden rounded-2xl border border-sky-500/30 p-6 sm:p-8 min-h-[390px]">
+<div aria-hidden="true" class="scan-line"></div>
+<div class="flex justify-between items-center border-b border-dark-600 pb-4">
+<div aria-hidden="true" class="terminal-dots flex gap-2"><span></span><span></span><span></span></div>
+<span class="text-xs text-neutral-400">passive analysis</span>
+</div>
+<div class="mt-8">
+<p class="text-sm text-neutral-400">URL analyzed</p>
+<p class="font-mono text-sm text-sky-400 mt-1 break-all">https://seu-site.exemplo</p>
+</div>
+<div class="grid grid-cols-3 gap-3 mt-8">
+<div class="bg-dark-800 rounded-xl p-4"><span class="text-2xl font-bold text-emerald-400">5</span><p class="text-xs text-neutral-400 mt-1">tools</p></div>
+<div class="bg-dark-800 rounded-xl p-4"><span class="text-2xl font-bold text-amber-400">2</span><p class="text-xs text-neutral-400 mt-1">items to watch</p></div>
+<div class="bg-dark-800 rounded-xl p-4"><span class="text-2xl font-bold text-red-400">1</span><p class="text-xs text-neutral-400 mt-1">blocker</p></div>
+</div>
+<div class="mt-7 space-y-3 text-sm"><p class="flex items-center gap-3"><span class="w-2 h-2 bg-emerald-400 rounded-full"></span>Safe context detected</p><p class="flex items-center gap-3"><span class="w-2 h-2 bg-amber-400 rounded-full"></span>Fallback not found</p><p class="flex items-center gap-3"><span class="w-2 h-2 bg-red-400 rounded-full"></span>Critical action without visible confirmation</p></div>
+</div>
+<div>
+<h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.025em]">Start with what your site reveals.</h2>
+<p class="text-neutral-300 mt-5 text-lg leading-relaxed">Readiness opens a URL in an isolated browser, discovers declarative and imperative tools, and creates a report with evidence. No tools are executed.</p>
+<ul class="mt-7 space-y-4 text-neutral-300">
+<li class="flex gap-3"><svg aria-hidden="true" class="w-5 h-5 text-sky-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"></path></svg><span>Overall score and results by category.</span></li>
+<li class="flex gap-3"><svg aria-hidden="true" class="w-5 h-5 text-sky-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"></path></svg><span>Inventory of tools, schemas, and risk signals.</span></li>
+<li class="flex gap-3"><svg aria-hidden="true" class="w-5 h-5 text-sky-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M5 3h10l4 4v14H5z"></path><path d="M15 3v5h5M8 13h8M8 17h5"></path></svg><span>Prioritized recommendations and an exportable JSON report.</span></li>
+</ul>
+<div class="flex justify-start mt-9"><a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 text-slate-950 font-bold hover:bg-sky-400" href="https://webmcp.inema.pro/">Open WebMCP Readiness</a></div>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+<h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.025em] max-w-3xl">Six repositories, one journey.</h2>
+<p class="text-neutral-400 mt-4 max-w-2xl">The learning content remains separate from the public product. The shared manifest keeps the sequence understandable and portable.</p>
+<div class="mt-10 overflow-x-auto rounded-xl border border-dark-600">
+<table class="w-full min-w-[760px] text-left">
+<thead class="bg-dark-700/70 text-sm text-neutral-400"><tr><th class="p-4 font-medium">Repository</th><th class="p-4 font-medium">Role</th><th class="p-4 font-medium">Deliverable</th></tr></thead>
+<tbody class="divide-y divide-dark-600 text-sm">
+<tr><td class="p-4 font-semibold text-yellow-400">01 · Training</td><td class="p-4">Entry point and assessment</td><td class="p-4 text-neutral-400">Readiness report</td></tr>
+<tr><td class="p-4 font-semibold text-emerald-400">02 · Builder</td><td class="p-4">Instrumentation</td><td class="p-4 text-neutral-400">Declarative and imperative tools</td></tr>
+<tr><td class="p-4 font-semibold text-blue-400">03 · Integrator</td><td class="p-4">Migration</td><td class="p-4 text-neutral-400">Existing site prepared</td></tr>
+<tr><td class="p-4 font-semibold text-purple-400">04 · Agent Developer</td><td class="p-4">Agent</td><td class="p-4 text-neutral-400">Discovery and execution</td></tr>
+<tr><td class="p-4 font-semibold text-amber-400">05 · Expert</td><td class="p-4">Production</td><td class="p-4 text-neutral-400">Security, evals, and governance</td></tr>
+<tr><td class="p-4 font-semibold text-sky-400">06 · Agent Hub</td><td class="p-4">Public product</td><td class="p-4 text-neutral-400">WebMCP client ready to use</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+<div class="rounded-2xl border border-primary/40 bg-primary/10 p-8 sm:p-12">
+<div class="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
+<div><h2 class="text-3xl sm:text-4xl font-bold">Get a baseline before the first lesson.</h2><p class="text-neutral-300 mt-4 max-w-2xl">Analyze the site now. The initial report becomes the baseline for comparing the deliverables from the four phases.</p></div>
+<a class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-primary text-gray-950 font-bold hover:bg-yellow-300" href="https://webmcp.inema.pro/">Create an initial assessment</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between gap-3 text-sm text-neutral-500">
+<p>WebMCP Training · experimental technology, versions pinned by edition.</p>
+<a class="text-sky-400 hover:text-sky-300" href="https://inema.club" rel="noreferrer" target="_blank">INEMA.CLUB</a>
+</div>
+</footer>
+<script>
+    function toggleTopic(button) {
+      var panel = document.getElementById(button.getAttribute('aria-controls'));
+      var expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!expanded));
+      if (panel) panel.classList.toggle('active', !expanded);
+    }
+    function openModal(id) { var modal = document.getElementById(id); if (modal) modal.classList.remove('hidden'); }
+    function closeModal() { document.querySelectorAll('.modal').forEach(function (modal) { modal.classList.add('hidden'); }); }
+    var themeToggle = document.getElementById('theme-toggle');
+    var darkIcon = document.getElementById('theme-toggle-dark-icon');
+    var lightIcon = document.getElementById('theme-toggle-light-icon');
+    function syncThemeIcons() { var dark = document.documentElement.classList.contains('dark'); darkIcon.classList.toggle('hidden', dark); lightIcon.classList.toggle('hidden', !dark); }
+    syncThemeIcons();
+    themeToggle.addEventListener('click', function () { var dark = !document.documentElement.classList.contains('dark'); document.documentElement.classList.toggle('dark', dark); localStorage.setItem('theme', dark ? 'dark' : 'light'); syncThemeIcons(); });
+  </script>
+<script src="../assets/learn.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function () { if (window.INEMA) INEMA.init(); });</script>
+</body>
+</html>
