@@ -10,7 +10,7 @@ sem perder progresso, dúvidas, anotações, checkpoints ou resultados de avalia
 Todas as páginas usarêo:
 
 ```html
-<meta name="inema-course" content="webmcp-zero-expert">
+<meta name="ARCKHÉ-course" content="webmcp-zero-expert">
 ```
 
 Os IDs de tópicos serêo estáveis e globais:
@@ -56,7 +56,7 @@ consultá-lo, mas a certificaçêo respeita a ordem e os portões.
 ### Mesmo domínio
 
 Quando os seis projetos forem publicados sob caminhos do mesmo domínio, o estado
-`localStorage` da camada INEMA será compartilhado automaticamente. Exemplo:
+`localStorage` da camada ARCKHÉ será compartilhado automaticamente. Exemplo:
 
 ```text
 curso.exemplo.com/formacao/
@@ -88,12 +88,12 @@ com merge nêo destrutivo. Assim, o aluno nunca fica preso ao serviço de sincro
 
 ## Eventos de integraçêo
 
-O orquestrador acompanha os eventos existentes da camada INEMA:
+O orquestrador acompanha os eventos existentes da camada ARCKHÉ:
 
-- `inema:read`;
-- `inema:doubt`;
-- `inema:note`;
-- `inema:progress`.
+- `ARCKHÉ:read`;
+- `ARCKHÉ:doubt`;
+- `ARCKHÉ:note`;
+- `ARCKHÉ:progress`.
 
 E adicionará eventos de rede do curso:
 

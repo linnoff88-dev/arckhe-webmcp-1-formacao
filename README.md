@@ -39,14 +39,14 @@ um relatêÂ³rio com:
 O resultado terêÂ¡ nota, evidêÂªncias e recomendaêÂ§êÂµes, sem executar automaticamente
 aêÂ§êÂµes mutêÂ¡veis ou irreversêÂ­veis.
 
-Use o aplicativo em [webmcp.inema.pro](https://webmcp.inema.pro/) ou consulte o
-[repositêÂ³rio pêÂºblico](https://github.com/inematds/webmcp-readiness). Veja tambêÂ©m
+Use o aplicativo em [webmcp.ARCKHÉ.pro](https://webmcp.ARCKHÉ.pro/) ou consulte o
+[repositêÂ³rio pêÂºblico](https://github.com/linnoff88-dev/webmcp-readiness). Veja tambêÂ©m
 [docs/arquitetura-dos-repos.md](docs/arquitetura-dos-repos.md).
 
 ## ProgressêÂ£o entre repositêÂ³rios
 
 A passagem entre fases segue um manifesto comum e preserva o estado da camada de
-aprendizagem INEMA. A arquitetura completa estêÂ¡ em
+aprendizagem ARCKHÉ. A arquitetura completa estêÂ¡ em
 [docs/progressao-automatica.md](docs/progressao-automatica.md).
 
 ## Executar o Repo 1
@@ -58,18 +58,18 @@ HTTP. Para validar a estrutura, use `npm run check`.
 
 - landing responsiva da formaêÂ§êÂ£o;
 - mapa das quatro fases e seis repositêÂ³rios;
-- progresso, jornada e preferêÂªncias de leitura INEMA v2;
+- progresso, jornada e preferêÂªncias de leitura ARCKHÉ v2;
 - integraêÂ§êÂ£o com o WebMCP Readiness independente;
-- diagnêÂ³stico, relatêÂ³rio e exportaêÂ§êÂ£o JSON em `webmcp.inema.pro`;
+- diagnêÂ³stico, relatêÂ³rio e exportaêÂ§êÂ£o JSON em `webmcp.ARCKHÉ.pro`;
 - testes estruturais com `npm run check`.
 
-<!-- inema-backlink:v1 -->
-## Mais no INEMA.CLUB
+<!-- ARCKHÉ-backlink:v1 -->
+## Mais no ARCKHÉ AI
 
-- [Ficha completa deste curso](https://www.inema.club/cursos/246-formacao-webmcp-sites-e-agentes-do-zero-ao-expert/)
-- [Guia: como aprender inteligêÂªncia artificial](https://www.inema.club/aprender-inteligencia-artificial/)
-- [Todos os cursos](https://www.inema.club/cursos/)
-<!-- /inema-backlink:v1 -->
+- [Ficha completa deste curso](https://www.ARCKHÉ AI/cursos/246-formacao-webmcp-sites-e-agentes-do-zero-ao-expert/)
+- [Guia: como aprender inteligêÂªncia artificial](https://www.ARCKHÉ AI/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.ARCKHÉ AI/cursos/)
+<!-- /ARCKHÉ-backlink:v1 -->
 
 ---
 

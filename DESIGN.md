@@ -1,6 +1,6 @@
 ---
 name: "Formaçêo WebMCP — Sites e Agentes do Zero ao Expert"
-description: "Portal técnico INEMA que transforma diagnóstico em uma jornada de formaçêo orientada por evidências."
+description: "Portal técnico ARCKHÉ que transforma diagnóstico em uma jornada de formaçêo orientada por evidências."
 colors:
   decision-amber: "#facc15"
   operational-cyan: "#38bdf8"
@@ -100,7 +100,7 @@ components:
 
 O sistema visual trata a formaçêo como uma bancada técnica em operaçêo: superfícies escuras e sóbrias organizam evidências, linhas finas mostram relações e diagramas SVG explicam o mecanismo antes de qualquer promessa. A interface é direta, profissional e densa o bastante para transmitir rigor, sem se transformar em painel corporativo genérico.
 
-O mundo é o `formato-curso-v2` da INEMA: dark-first, Inter, âmbar para decisões e ciano para fluxo, leitura e diagnóstico. A landing e o Readiness pertencem ao mesmo sistema, mas expressam modos diferentes — a primeira orienta a jornada; o segundo funciona como ferramenta operacional. A camada de aprendizagem atravessa ambos com progresso portátil, preferências de leitura, temas claro, sépia, foco e alto contraste, além do painel “Minha jornada”.
+O mundo é o `formato-curso-v2` da ARCKHÉ: dark-first, Inter, âmbar para decisões e ciano para fluxo, leitura e diagnóstico. A landing e o Readiness pertencem ao mesmo sistema, mas expressam modos diferentes — a primeira orienta a jornada; o segundo funciona como ferramenta operacional. A camada de aprendizagem atravessa ambos com progresso portátil, preferências de leitura, temas claro, sépia, foco e alto contraste, além do painel “Minha jornada”.
 
 **Key Characteristics:**
 

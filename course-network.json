@@ -34,7 +34,7 @@
     "repository": "webmcp-6-agent-hub"
   },
   "state": {
-    "localNamespace": "inema.webmcp-zero-expert.*",
+    "localNamespace": "ARCKHÉ.webmcp-zero-expert.*",
     "fallback": "json-merge",
     "crossOrigin": "signed-handoff"
   }

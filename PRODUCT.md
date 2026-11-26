@@ -50,7 +50,7 @@ das quatro fases.
 
 Nome: Formaçêo WebMCP — Sites e Agentes do Zero ao Expert.
 
-Identidade vinculante: padrêo INEMA.CLUB `formato-curso-v2`, dark-first, âmbar/ciano,
+Identidade vinculante: padrêo ARCKHÉ AI `formato-curso-v2`, dark-first, âmbar/ciano,
 diagramas SVG técnicos, voz direta e profissional, sem gamificaçêo manipulativa.
 
 ## Evidence on Hand
