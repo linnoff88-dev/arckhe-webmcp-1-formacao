@@ -2,23 +2,23 @@
 
 ## Objetivo final
 
-Ao concluir a formação, o aluno deverá ser capaz de:
+Ao concluir a formaçêo, o aluno deverá ser capaz de:
 
 1. Analisar um site existente e identificar quais funções devem ser expostas aos agentes.
 2. Transformar formulários e funções JavaScript em ferramentas WebMCP.
 3. Criar um site novo já preparado para agentes.
 4. Construir um agente conversacional que:
    - descobre as ferramentas disponibilizadas pelo site;
-   - entende a solicitação do usuário;
+   - entende a solicitaçêo do usuário;
    - escolhe a ferramenta correta;
    - envia parâmetros estruturados;
-   - executa a ação no site;
+   - executa a açêo no site;
    - recebe a resposta estruturada;
    - atualiza a interface;
    - informa o resultado ao usuário.
-5. Proteger ações críticas com autenticação, autorização e confirmação humana.
+5. Proteger ações críticas com autenticaçêo, autorizaçêo e confirmaçêo humana.
 6. Testar o sistema com avaliações determinísticas, probabilísticas e de ponta a ponta.
-7. Publicar uma solução progressiva, com WebMCP, fallback e integração opcional com MCP tradicional.
+7. Publicar uma soluçêo progressiva, com WebMCP, fallback e integraçêo opcional com MCP tradicional.
 
 ---
 
@@ -26,7 +26,7 @@ Ao concluir a formação, o aluno deverá ser capaz de:
 
 ## WebMCP ainda é uma tecnologia experimental
 
-O documento mais atual é um **Draft Community Group Report publicado em 26 de agosto de 2026**. Ele foi produzido no Web Machine Learning Community Group, mas ainda não é um padrão formal do W3C nem está na trilha oficial de recomendação. Portanto, o curso precisa ser tratado como uma formação sobre uma tecnologia emergente e incluir controle de versões.
+O documento mais atual é um **Draft Community Group Report publicado em 26 de agosto de 2026**. Ele foi produzido no Web Machine Learning Community Group, mas ainda nêo é um padrêo formal do W3C nem está na trilha oficial de recomendaçêo. Portanto, o curso precisa ser tratado como uma formaçêo sobre uma tecnologia emergente e incluir controle de versões.
 
 Referência:
 
@@ -37,15 +37,15 @@ Atualmente, o WebMCP possui:
 - suporte experimental no Brave;
 - teste de origem no Chrome 149;
 - teste de origem no Edge 150;
-- posições ainda em avaliação para Firefox e Safari.
+- posições ainda em avaliaçêo para Firefox e Safari.
 
-O Chrome Status indica teste de origem entre as versões 149 e 156 e uma previsão, ainda não garantida, de disponibilização mais ampla na versão 157.
+O Chrome Status indica teste de origem entre as versões 149 e 156 e uma previsêo, ainda nêo garantida, de disponibilizaçêo mais ampla na versêo 157.
 
 Referência:
 
 - https://github.com/webmachinelearning/webmcp/blob/main/implementation-status.md
 
-**Consequência para o curso:** os laboratórios devem usar uma versão de navegador fixada, flag experimental ou origin trial, além de uma camada de compatibilidade.
+**Consequência para o curso:** os laboratórios devem usar uma versêo de navegador fixada, flag experimental ou origin trial, além de uma camada de compatibilidade.
 
 ---
 
@@ -78,10 +78,10 @@ Cada ferramenta possui:
 
 - nome;
 - título opcional;
-- descrição;
+- descriçêo;
 - esquema de entrada;
 - anotações;
-- função de execução;
+- funçêo de execuçêo;
 - suporte a cancelamento com `AbortSignal`.
 
 A mesma API permite descobrir ferramentas com `getTools()` e executá-las com `executeTool()`.
@@ -94,20 +94,20 @@ Referência:
 
 ## O agente pode conversar diretamente com o site
 
-A arquitetura necessária para o projeto final já existe em uma demonstração do Google Chrome Labs chamada **WebMCP Page Agent**.
+A arquitetura necessária para o projeto final já existe em uma demonstraçêo do Google Chrome Labs chamada **WebMCP Page Agent**.
 
 Ela:
 
 1. carrega um site WebMCP em um `iframe`;
 2. chama `getTools()` para descobrir suas ferramentas;
 3. transforma essas ferramentas em declarações compreensíveis pela LLM;
-4. recebe uma chamada de função da LLM;
+4. recebe uma chamada de funçêo da LLM;
 5. chama `executeTool()`;
 6. recebe a resposta do site;
 7. devolve a resposta à LLM;
 8. continua a conversa com o usuário.
 
-Essa demonstração usa um chat com Gemini, mas a arquitetura pode ser adaptada para qualquer modelo que suporte chamadas de ferramentas.
+Essa demonstraçêo usa um chat com Gemini, mas a arquitetura pode ser adaptada para qualquer modelo que suporte chamadas de ferramentas.
 
 Referência:
 
@@ -117,7 +117,7 @@ Esse será o **núcleo técnico do curso**.
 
 ---
 
-## WebMCP não substitui MCP
+## WebMCP nêo substitui MCP
 
 O MCP tradicional é mais apropriado para:
 
@@ -133,17 +133,17 @@ O WebMCP é voltado para:
 - navegador;
 - guia ou página aberta;
 - estado atual da interface;
-- cookies e sessão daquele navegador;
-- colaboração visível entre humano, agente e site;
-- interação com o DOM e a experiência existente.
+- cookies e sessêo daquele navegador;
+- colaboraçêo visível entre humano, agente e site;
+- interaçêo com o DOM e a experiência existente.
 
-A recomendação oficial é considerar WebMCP e MCP como tecnologias complementares.
+A recomendaçêo oficial é considerar WebMCP e MCP como tecnologias complementares.
 
 Referência:
 
 - https://developer.chrome.com/docs/ai/webmcp/compare-mcp
 
-Portanto, a formação deve ensinar três arquiteturas:
+Portanto, a formaçêo deve ensinar três arquiteturas:
 
 ```text
 Somente WebMCP
@@ -158,20 +158,20 @@ Agente → WebMCP → Site → API/MCP → Serviços
 
 ---
 
-## Segurança não pode ser um módulo opcional
+## Segurança nêo pode ser um módulo opcional
 
-As principais ameaças identificadas na especificação são:
+As principais ameaças identificadas na especificaçêo sêo:
 
 - prompt injection;
 - descrições de ferramentas maliciosas;
 - respostas contendo instruções maliciosas;
 - ferramentas que mentem sobre o que realmente fazem;
-- exposição excessiva de dados;
+- exposiçêo excessiva de dados;
 - vazamento de contexto entre sites;
 - ações críticas realizadas com cookies e sessões autenticadas;
-- diferenças de validação entre o fluxo humano e o fluxo WebMCP.
+- diferenças de validaçêo entre o fluxo humano e o fluxo WebMCP.
 
-A especificação reconhece que uma descrição pode dizer que uma ferramenta apenas “finaliza o carrinho”, quando o código realmente efetua uma compra. Por isso, o agente não deve confiar somente no nome ou na descrição.
+A especificaçêo reconhece que uma descriçêo pode dizer que uma ferramenta apenas “finaliza o carrinho”, quando o código realmente efetua uma compra. Por isso, o agente nêo deve confiar somente no nome ou na descriçêo.
 
 Referência:
 
@@ -186,13 +186,13 @@ annotations: {
 }
 ```
 
-`readOnlyHint` informa que a ferramenta não altera estado. `untrustedContentHint` sinaliza que a resposta contém dados potencialmente não confiáveis.
+`readOnlyHint` informa que a ferramenta nêo altera estado. `untrustedContentHint` sinaliza que a resposta contém dados potencialmente nêo confiáveis.
 
 ---
 
-## Avaliações são parte da implementação
+## Avaliações sêo parte da implementaçêo
 
-Não basta testar se a função JavaScript funciona. Também é necessário testar se diferentes modelos:
+Nêo basta testar se a funçêo JavaScript funciona. Também é necessário testar se diferentes modelos:
 
 - escolhem a ferramenta certa;
 - extraem os argumentos corretamente;
@@ -201,7 +201,7 @@ Não basta testar se a função JavaScript funciona. Também é necessário test
 - recuperam-se de erros;
 - concluem a jornada do usuário.
 
-A documentação oficial recomenda combinar testes determinísticos tradicionais com evals probabilísticos e testes de ponta a ponta.
+A documentaçêo oficial recomenda combinar testes determinísticos tradicionais com evals probabilísticos e testes de ponta a ponta.
 
 Referência:
 
@@ -227,7 +227,7 @@ Referência:
 
 ## Nome
 
-# Formação WebMCP — Sites e Agentes do Zero ao Expert
+# Formaçêo WebMCP — Sites e Agentes do Zero ao Expert
 
 ### Subtítulo
 
@@ -238,7 +238,7 @@ Referência:
 | Etapa | Carga |
 |---|---:|
 | Bootcamp de fundamentos | 8 horas |
-| Formação principal | 48 horas |
+| Formaçêo principal | 48 horas |
 | Projeto final acompanhado | 24 horas |
 | **Total** | **80 horas** |
 
@@ -247,28 +247,28 @@ Referência:
 - 12 semanas;
 - duas aulas por semana;
 - aulas conceituais curtas;
-- demonstração ao vivo;
+- demonstraçêo ao vivo;
 - laboratório em cada módulo;
 - um único projeto evolutivo;
 - projeto final aplicado a um site real.
 
-O termo “expert” deve significar **expert aplicado dentro do escopo WebMCP**: alguém capaz de projetar, implementar, testar, proteger e publicar uma integração. Não significa substituir anos de experiência geral em segurança, arquitetura web ou engenharia de IA.
+O termo “expert” deve significar **expert aplicado dentro do escopo WebMCP**: alguém capaz de projetar, implementar, testar, proteger e publicar uma integraçêo. Nêo significa substituir anos de experiência geral em segurança, arquitetura web ou engenharia de IA.
 
 ---
 
 # 3. Público-alvo
 
-A formação atende principalmente:
+A formaçêo atende principalmente:
 
 - desenvolvedores web;
 - construtores de agentes de IA;
-- profissionais de automação;
+- profissionais de automaçêo;
 - agências que mantêm sites de clientes;
 - equipes de produto;
 - profissionais que trabalham com React, Angular, JavaScript ou aplicações web;
 - empreendedores com equipe técnica.
 
-Uma pessoa sem experiência em programação poderá acompanhar o bootcamp, mas o projeto final exigirá JavaScript. Para o público não técnico, o curso pode oferecer uma trilha paralela de estratégia, auditoria e especificação de ferramentas.
+Uma pessoa sem experiência em programaçêo poderá acompanhar o bootcamp, mas o projeto final exigirá JavaScript. Para o público nêo técnico, o curso pode oferecer uma trilha paralela de estratégia, auditoria e especificaçêo de ferramentas.
 
 ---
 
@@ -284,7 +284,7 @@ Conteúdo:
 
 - navegador e servidor;
 - HTTP e HTTPS;
-- requisição e resposta;
+- requisiçêo e resposta;
 - HTML semântico;
 - formulários;
 - DOM;
@@ -325,7 +325,7 @@ Conteúdo:
 - ciclo de chamada de ferramenta;
 - respostas estruturadas;
 - agente simples versus agente autônomo;
-- riscos de alucinação.
+- riscos de alucinaçêo.
 
 ### Laboratório
 
@@ -355,7 +355,7 @@ E produz:
 
 Conteúdo:
 
-- atuação por screenshot e cliques;
+- atuaçêo por screenshot e cliques;
 - DOM scraping;
 - ferramentas estruturadas;
 - OpenAPI;
@@ -365,14 +365,14 @@ Conteúdo:
 - páginas como servidores de ferramentas;
 - ferramentas efêmeras;
 - humano no circuito;
-- casos em que WebMCP não deve ser usado.
+- casos em que WebMCP nêo deve ser usado.
 
 ### Entrega
 
 Documento de arquitetura comparando:
 
 ```text
-Automação visual
+Automaçêo visual
 API tradicional
 MCP
 WebMCP
@@ -410,7 +410,7 @@ const webmcpDisponivel =
   typeof document.modelContext !== "undefined";
 ```
 
-E apresenta um fallback quando o recurso não está disponível.
+E apresenta um fallback quando o recurso nêo está disponível.
 
 ---
 
@@ -441,7 +441,7 @@ Atualizar um formulário tradicional de contato:
 ```html
 <form
   toolname="solicitar_contato"
-  tooldescription="Envia uma solicitação de contato para a equipe comercial.">
+  tooldescription="Envia uma solicitaçêo de contato para a equipe comercial.">
 ```
 
 O formulário deverá:
@@ -449,7 +449,7 @@ O formulário deverá:
 - ser preenchido pelo agente;
 - continuar visível;
 - validar os dados;
-- solicitar confirmação;
+- solicitar confirmaçêo;
 - retornar um protocolo estruturado.
 
 ---
@@ -463,14 +463,14 @@ Conteúdo:
 - `document.modelContext`;
 - `registerTool`;
 - nome e título;
-- descrição;
+- descriçêo;
 - `inputSchema`;
 - `execute`;
 - funções assíncronas;
 - resposta estruturada;
 - `AbortSignal`;
 - cancelamento;
-- registro e remoção dinâmica;
+- registro e remoçêo dinâmica;
 - `toolchange`;
 - anotações.
 
@@ -506,10 +506,10 @@ Conteúdo:
 - enums;
 - IDs versus nomes compreensíveis;
 - esquemas flexíveis;
-- validação rígida no código;
+- validaçêo rígida no código;
 - registro de ferramentas conforme o estado.
 
-As práticas oficiais recomendam ferramentas pequenas, sem sobreposição, descrições claras, registro contextual e validação real no código. Também alertam que muitas ferramentas aumentam o contexto e dificultam a escolha do agente.
+As práticas oficiais recomendam ferramentas pequenas, sem sobreposiçêo, descrições claras, registro contextual e validaçêo real no código. Também alertam que muitas ferramentas aumentam o contexto e dificultam a escolha do agente.
 
 Referência:
 
@@ -540,7 +540,7 @@ cancelar_inscricao
 
 ---
 
-## Módulo 6 — Estado, erros e recuperação
+## Módulo 6 — Estado, erros e recuperaçêo
 
 **Carga:** 3 horas
 
@@ -559,7 +559,7 @@ Conteúdo:
 - idempotência;
 - resultados parciais;
 - ações duplicadas;
-- atualização visual da interface.
+- atualizaçêo visual da interface.
 
 ### Laboratório
 
@@ -599,14 +599,14 @@ Conteúdo:
 - inventário de formulários;
 - inventário de funções JavaScript;
 - inventário de APIs;
-- identificação de jornadas críticas;
-- separação da lógica da interface;
+- identificaçêo de jornadas críticas;
+- separaçêo da lógica da interface;
 - wrappers WebMCP;
 - progressive enhancement;
-- evitar duplicação de regras de negócio;
+- evitar duplicaçêo de regras de negócio;
 - atualizar sem redesenhar o site.
 
-### Método de migração
+### Método de migraçêo
 
 ```text
 1. Mapear jornadas
@@ -627,8 +627,8 @@ O aluno escolhe um site real e produz:
 - inventário de funcionalidades;
 - mapa de ferramentas;
 - nível de risco de cada ferramenta;
-- plano de migração;
-- primeira implementação funcional.
+- plano de migraçêo;
+- primeira implementaçêo funcional.
 
 ---
 
@@ -643,11 +643,11 @@ Conteúdo:
 - hooks;
 - ciclo de montagem e desmontagem;
 - Angular;
-- injeção de dependência;
+- injeçêo de dependência;
 - formulários;
 - aplicações single-page;
 - mudança de rotas;
-- Next.js e renderização no cliente;
+- Next.js e renderizaçêo no cliente;
 - cleanup com `AbortController`;
 - evitar registros duplicados.
 
@@ -669,12 +669,12 @@ Conteúdo:
 
 - agente integrado à página;
 - agente em `iframe`;
-- agente em extensão;
+- agente em extensêo;
 - `getTools`;
 - ferramentas disponíveis;
 - mudanças de ferramentas;
-- leitura de nome, descrição e esquema;
-- transformação para o formato da LLM.
+- leitura de nome, descriçêo e esquema;
+- transformaçêo para o formato da LLM.
 
 ### Laboratório
 
@@ -692,28 +692,28 @@ consultar_status
 
 ---
 
-## Módulo 10 — Execução de ferramentas
+## Módulo 10 — Execuçêo de ferramentas
 
 **Carga:** 3 horas
 
 Conteúdo:
 
 - escolha feita pelo modelo;
-- localização da ferramenta;
-- validação dos argumentos;
+- localizaçêo da ferramenta;
+- validaçêo dos argumentos;
 - `executeTool`;
 - resposta;
 - tratamento de exceções;
 - cancelamento;
-- atualização do chat;
-- atualização do site.
+- atualizaçêo do chat;
+- atualizaçêo do site.
 
 ### Fluxo central
 
 ```text
 Usuário envia mensagem
         ↓
-LLM interpreta intenção
+LLM interpreta intençêo
         ↓
 LLM escolhe uma ferramenta
         ↓
@@ -794,10 +794,10 @@ Conteúdo:
 - chamadas simples;
 - chamadas múltiplas;
 - resposta de ferramenta;
-- continuação do turno;
+- continuaçêo do turno;
 - limite de iterações;
-- detecção de loop;
-- recuperação;
+- detecçêo de loop;
+- recuperaçêo;
 - estado da conversa;
 - troca de modelo;
 - uso de modelos locais ou remotos.
@@ -813,7 +813,7 @@ interface ModelAdapter {
 }
 ```
 
-Assim, o curso não fica preso a um modelo específico.
+Assim, o curso nêo fica preso a um modelo específico.
 
 ---
 
@@ -828,22 +828,22 @@ Conteúdo:
 - prompt injection indireta;
 - tool poisoning;
 - output injection;
-- conteúdo não confiável;
+- conteúdo nêo confiável;
 - descrições falsas;
 - parâmetros excessivos;
 - menor privilégio;
-- autorização no servidor;
+- autorizaçêo no servidor;
 - CSRF;
 - XSS;
-- autenticação;
-- sessão;
-- confirmação humana;
+- autenticaçêo;
+- sessêo;
+- confirmaçêo humana;
 - logs;
 - trilha de auditoria;
 - ações reversíveis;
-- separação entre preparar e confirmar.
+- separaçêo entre preparar e confirmar.
 
-### Padrão obrigatório para ações críticas
+### Padrêo obrigatório para ações críticas
 
 Em vez de criar uma única ferramenta:
 
@@ -860,7 +860,7 @@ consultar_compra
 cancelar_compra
 ```
 
-O agente nunca deve executar automaticamente uma ação irreversível somente porque a LLM escolheu aquela ferramenta.
+O agente nunca deve executar automaticamente uma açêo irreversível somente porque a LLM escolheu aquela ferramenta.
 
 ---
 
@@ -877,7 +877,7 @@ Conteúdo:
 - ferramentas persistentes;
 - operações em background;
 - compartilhamento de regras de negócio;
-- autenticação no backend;
+- autenticaçêo no backend;
 - WebMCP como camada contextual;
 - MCP como camada de serviços.
 
@@ -900,7 +900,7 @@ Conteúdo:
               ↓
 ┌───────────────────────────┐
 │ Site WebMCP               │
-│ UI + estado + sessão      │
+│ UI + estado + sessêo      │
 └─────────────┬─────────────┘
               ↓
 ┌───────────────────────────┐
@@ -918,22 +918,22 @@ Conteúdo:
 Conteúdo:
 
 - testes unitários;
-- testes de integração;
+- testes de integraçêo;
 - testes de esquema;
-- seleção de ferramenta;
-- extração de argumentos;
+- seleçêo de ferramenta;
+- extraçêo de argumentos;
 - ordem das chamadas;
 - resultados esperados;
 - testes multi-turno;
 - testes probabilísticos;
-- repetição da mesma avaliação;
+- repetiçêo da mesma avaliaçêo;
 - taxa de sucesso;
 - latência;
 - tokens;
 - custo;
 - erros;
 - relatórios;
-- regressão entre modelos.
+- regressêo entre modelos.
 
 ### Conjunto mínimo de evals
 
@@ -944,13 +944,13 @@ Conteúdo:
 5 parâmetros inválidos
 5 sequências multi-tool
 5 tentativas de prompt injection
-5 ações críticas sem confirmação
+5 ações críticas sem confirmaçêo
 5 falhas de API
 ```
 
 ---
 
-## Módulo 16 — Produção, compatibilidade e governança
+## Módulo 16 — Produçêo, compatibilidade e governança
 
 **Carga:** 3 horas
 
@@ -958,24 +958,24 @@ Conteúdo:
 
 - feature detection;
 - origin trial;
-- versão do navegador;
+- versêo do navegador;
 - polyfill;
 - fallback;
 - telemetry;
 - rollout gradual;
-- documentação;
+- documentaçêo;
 - catálogo de ferramentas;
 - versionamento de schemas;
-- depreciação;
-- migração;
-- monitoramento de mudanças na especificação;
-- gestão de risco.
+- depreciaçêo;
+- migraçêo;
+- monitoramento de mudanças na especificaçêo;
+- gestêo de risco.
 
 ---
 
 # 5. Um problema importante que o curso precisa ensinar
 
-Existe uma diferença entre o rascunho mais recente da especificação e parte da implementação/documentação atual.
+Existe uma diferença entre o rascunho mais recente da especificaçêo e parte da implementaçêo/documentaçêo atual.
 
 O rascunho de 26 de agosto apresenta:
 
@@ -989,7 +989,7 @@ Referência:
 
 - https://webmachinelearning.github.io/webmcp/
 
-A documentação anterior do Chrome e a demonstração Page Agent ainda mostram argumentos convertidos para JSON:
+A documentaçêo anterior do Chrome e a demonstraçêo Page Agent ainda mostram argumentos convertidos para JSON:
 
 ```javascript
 const inputArgs = JSON.stringify(args);
@@ -1000,7 +1000,7 @@ Referência:
 
 - https://developer.chrome.com/docs/ai/webmcp/imperative-api
 
-Isso demonstra que o padrão está evoluindo rapidamente.
+Isso demonstra que o padrêo está evoluindo rapidamente.
 
 ## Como tratar no curso
 
@@ -1030,9 +1030,9 @@ spec-current
 polyfill
 ```
 
-**Não se deve testar os dois formatos automaticamente em ferramentas que alteram estado**, pois uma tentativa que pareça falhar pode ter realizado parcialmente uma compra, inscrição ou exclusão.
+**Nêo se deve testar os dois formatos automaticamente em ferramentas que alteram estado**, pois uma tentativa que pareça falhar pode ter realizado parcialmente uma compra, inscriçêo ou exclusêo.
 
-Ferramentas mutáveis não poderão ter retry automático sem idempotência.
+Ferramentas mutáveis nêo poderêo ter retry automático sem idempotência.
 
 ---
 
@@ -1073,9 +1073,9 @@ Ao menos:
 - duas ferramentas que atualizem a interface;
 - uma ferramenta declarativa;
 - três ferramentas imperativas;
-- uma ferramenta crítica com confirmação;
+- uma ferramenta crítica com confirmaçêo;
 - uma ferramenta que possa ser cancelada;
-- uma ferramenta que retorne conteúdo não confiável.
+- uma ferramenta que retorne conteúdo nêo confiável.
 
 ---
 
@@ -1088,11 +1088,11 @@ O agente deverá:
 3. Descobrir suas ferramentas.
 4. Mostrar ao usuário quais ferramentas foram encontradas.
 5. Converter os schemas para o formato do modelo.
-6. Receber uma solicitação em linguagem natural.
+6. Receber uma solicitaçêo em linguagem natural.
 7. Selecionar uma ferramenta.
 8. Validar os argumentos.
-9. Classificar o risco da ação.
-10. Solicitar confirmação quando necessário.
+9. Classificar o risco da açêo.
+10. Solicitar confirmaçêo quando necessário.
 11. Executar a ferramenta.
 12. Receber a resposta.
 13. Apresentar o resultado ao usuário.
@@ -1139,7 +1139,7 @@ await document.modelContext.registerTool({
 
     if (!response.ok) {
       throw new Error(
-        "Não foi possível consultar os cursos. Tente novamente."
+        "Nêo foi possível consultar os cursos. Tente novamente."
       );
     }
 
@@ -1208,59 +1208,59 @@ webmcp-agent-hub/
 
 ---
 
-# 8. Critérios para aprovação
+# 8. Critérios para aprovaçêo
 
-## Implementação
+## Implementaçêo
 
 - site humano continua funcionando sem agente;
-- ferramentas são descobertas dinamicamente;
+- ferramentas sêo descobertas dinamicamente;
 - UI é atualizada durante as chamadas;
-- respostas são estruturadas;
-- erros permitem recuperação;
+- respostas sêo estruturadas;
+- erros permitem recuperaçêo;
 - cancelamento funciona;
-- não existe duplicação automática de ações críticas.
+- nêo existe duplicaçêo automática de ações críticas.
 
 ## Qualidade do agente
 
 - 100% dos testes determinísticos aprovados;
 - pelo menos 90% de escolha correta de ferramenta nas intenções principais;
 - pelo menos 85% em variações de linguagem;
-- nenhuma ação crítica executada sem confirmação;
-- nenhuma origem não autorizada consegue executar ferramentas;
+- nenhuma açêo crítica executada sem confirmaçêo;
+- nenhuma origem nêo autorizada consegue executar ferramentas;
 - agente encerra loops após o limite configurado.
 
 ## Segurança
 
-- autenticação validada no backend;
-- autorização por operação;
-- proteção contra chamadas duplicadas;
+- autenticaçêo validada no backend;
+- autorizaçêo por operaçêo;
+- proteçêo contra chamadas duplicadas;
 - uso correto de `readOnlyHint`;
 - uso correto de `untrustedContentHint`;
 - logs sem dados sensíveis;
 - threat model documentado.
 
-## Produção
+## Produçêo
 
 - feature detection;
 - fallback;
 - matriz de versões;
-- documentação de migração;
+- documentaçêo de migraçêo;
 - catálogo de ferramentas;
 - evals executáveis;
-- demonstração completa gravada.
+- demonstraçêo completa gravada.
 
 ---
 
-# 9. Avaliação do aluno
+# 9. Avaliaçêo do aluno
 
 | Componente | Peso |
 |---|---:|
 | Laboratórios | 25% |
-| Auditoria e migração de um site | 15% |
-| Implementação das ferramentas | 20% |
-| Construção do agente | 20% |
+| Auditoria e migraçêo de um site | 15% |
+| Implementaçêo das ferramentas | 20% |
+| Construçêo do agente | 20% |
 | Segurança e evals | 10% |
-| Apresentação final | 10% |
+| Apresentaçêo final | 10% |
 
 ---
 
@@ -1280,7 +1280,7 @@ Conclui até o módulo 12 e consegue criar um agente que descobre e executa ferr
 
 ## WebMCP Expert
 
-Conclui o projeto final com segurança, evals, fallback e publicação.
+Conclui o projeto final com segurança, evals, fallback e publicaçêo.
 
 ---
 
@@ -1295,12 +1295,12 @@ Para cada módulo:
 - código final;
 - laboratório;
 - desafio;
-- solução comentada;
+- soluçêo comentada;
 - quiz;
 - checklist;
 - evals;
 - branch correspondente no Git;
-- lista de mudanças da especificação.
+- lista de mudanças da especificaçêo.
 
 O projeto principal deve possuir tags:
 
@@ -1319,20 +1319,20 @@ final
 
 ---
 
-# 12. O que não deve aparecer no curso como prática recomendada
+# 12. O que nêo deve aparecer no curso como prática recomendada
 
-- Ensinar `navigator.modelContext` como API principal. A documentação atual orienta usar `document.modelContext`; a forma anterior foi descontinuada no Chrome 150.
-- Ensinar `unregisterTool()` como solução atual. O ciclo de vida deve ser controlado com `AbortController` e `AbortSignal`.
+- Ensinar `navigator.modelContext` como API principal. A documentaçêo atual orienta usar `document.modelContext`; a forma anterior foi descontinuada no Chrome 150.
+- Ensinar `unregisterTool()` como soluçêo atual. O ciclo de vida deve ser controlado com `AbortController` e `AbortSignal`.
 - Dizer que WebMCP já funciona universalmente nos navegadores.
 - Dizer que WebMCP substitui MCP.
-- Permitir que a LLM ignore as regras de autorização do backend.
+- Permitir que a LLM ignore as regras de autorizaçêo do backend.
 - Criar ferramentas genéricas como `executar_acao`.
-- Misturar consulta e confirmação na mesma ferramenta.
+- Misturar consulta e confirmaçêo na mesma ferramenta.
 - Retornar erros crus de banco de dados ou API.
 - Realizar retry automático de compras, exclusões ou inscrições.
 - Confiar em conteúdo retornado por ferramentas externas.
 - Criar dezenas de ferramentas sobrepostas.
-- Gravar o curso sem fixar uma versão do navegador e da especificação.
+- Gravar o curso sem fixar uma versêo do navegador e da especificaçêo.
 
 Referências:
 
@@ -1341,7 +1341,7 @@ Referências:
 
 ---
 
-# 13. Plano de produção do curso
+# 13. Plano de produçêo do curso
 
 ## Etapa 1 — Prova técnica
 
@@ -1351,10 +1351,10 @@ Antes de gravar qualquer aula, construir:
 - três ferramentas WebMCP;
 - um agente em outra origem;
 - descoberta com `getTools`;
-- execução com `executeTool`;
+- execuçêo com `executeTool`;
 - resposta estruturada;
-- atualização da interface;
-- confirmação de uma ação mutável.
+- atualizaçêo da interface;
+- confirmaçêo de uma açêo mutável.
 
 ## Etapa 2 — Projeto de referência
 
@@ -1382,7 +1382,7 @@ Produzir:
 - segurança;
 - evals;
 - MCP híbrido;
-- produção.
+- produçêo.
 
 ## Etapa 5 — Turma piloto
 
@@ -1390,13 +1390,13 @@ Executar com um grupo pequeno e medir:
 
 - tempo para configurar o navegador;
 - dificuldades com JavaScript;
-- taxa de conclusão dos laboratórios;
+- taxa de conclusêo dos laboratórios;
 - erros mais comuns;
 - acurácia dos agentes;
-- mudanças da especificação;
-- tempo real de conclusão do projeto.
+- mudanças da especificaçêo;
+- tempo real de conclusêo do projeto.
 
-## Etapa 6 — Publicação
+## Etapa 6 — Publicaçêo
 
 Após o piloto:
 
@@ -1409,9 +1409,9 @@ Após o piloto:
 
 ---
 
-# Recomendação principal
+# Recomendaçêo principal
 
-A formação não deve começar pela gravação das aulas. A primeira entrega precisa ser um **protótipo técnico vertical completo**:
+A formaçêo nêo deve começar pela gravaçêo das aulas. A primeira entrega precisa ser um **protótipo técnico vertical completo**:
 
 ```text
 Usuário
@@ -1424,6 +1424,6 @@ Usuário
 → agente informa o resultado
 ```
 
-Depois que esse fluxo estiver estável em uma versão fixada do Chrome, ele se transforma no projeto central das 80 horas.
+Depois que esse fluxo estiver estável em uma versêo fixada do Chrome, ele se transforma no projeto central das 80 horas.
 
-**Confiança:** alta na arquitetura pedagógica e no projeto final; média nos detalhes de compatibilidade futura, porque a especificação e a implementação ainda estão mudando ativamente. A solução é manter um runtime próprio, uma matriz de versões e um módulo permanente de atualização.
+**Confiança:** alta na arquitetura pedagógica e no projeto final; média nos detalhes de compatibilidade futura, porque a especificaçêo e a implementaçêo ainda estêo mudando ativamente. A soluçêo é manter um runtime próprio, uma matriz de versões e um módulo permanente de atualizaçêo.

@@ -1,18 +1,18 @@
-# Arquitetura da formação em seis repositórios
+# Arquitetura da formaçêo em seis repositórios
 
 | Repo | Papel | Resultado principal |
 |---|---|---|
-| 01 — Formação | Porta de entrada, currículo e diagnóstico | Plano individual + relatório de prontidão |
+| 01 — Formaçêo | Porta de entrada, currículo e diagnóstico | Plano individual + relatório de prontidêo |
 | 02 — Builder | Fase 1 | Site com ferramentas declarativas e imperativas |
 | 03 — Integrator | Fase 2 | Site existente migrado progressivamente |
 | 04 — Agent Developer | Fase 3 | Agente que descobre e executa ferramentas |
-| 05 — Expert | Fase 4 | Solução protegida, avaliada e publicável |
+| 05 — Expert | Fase 4 | Soluçêo protegida, avaliada e publicável |
 | 06 — Agent Hub | Produto público | Cliente WebMCP pronto para conectar agentes e sites |
 
-## Princípio de separação
+## Princípio de separaçêo
 
-Os repositórios 02 a 05 são ambientes de aprendizagem e podem conter branches,
-tags, exercícios e soluções. O repositório 06 é um produto independente: não deve
+Os repositórios 02 a 05 sêo ambientes de aprendizagem e podem conter branches,
+tags, exercícios e soluções. O repositório 06 é um produto independente: nêo deve
 depender do material do curso para ser instalado e utilizado.
 
 ## Fluxo recomendado

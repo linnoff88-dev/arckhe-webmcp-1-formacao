@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-08-30T00:57:57-03:00",
-  "title": "Design System: Formação WebMCP",
+  "title": "Design System: Formaçêo WebMCP",
   "extensions": {
     "colorMeta": {
       "decision-amber": {
         "role": "primary",
-        "displayName": "Âmbar de Decisão",
+        "displayName": "Âmbar de Decisêo",
         "canonical": "#facc15",
         "tonalRamp": ["#332800", "#554300", "#7a6100", "#a58200", "#cda600", "#facc15", "#ffe370", "#fff7cc"]
       },
@@ -109,16 +109,16 @@
     },
     "typographyMeta": {
       "display": { "displayName": "Display", "purpose": "Pergunta ou promessa principal do primeiro viewport." },
-      "headline": { "displayName": "Headline", "purpose": "Entrada de grandes blocos de leitura e decisão." },
+      "headline": { "displayName": "Headline", "purpose": "Entrada de grandes blocos de leitura e decisêo." },
       "title": { "displayName": "Title", "purpose": "Cartões, estados e agrupamentos operacionais." },
-      "body": { "displayName": "Body", "purpose": "Explicação contínua e conteúdo didático." },
-      "label": { "displayName": "Label", "purpose": "Ações, navegação, metadados e controles." }
+      "body": { "displayName": "Body", "purpose": "Explicaçêo contínua e conteúdo didático." },
+      "label": { "displayName": "Label", "purpose": "Ações, navegaçêo, metadados e controles." }
     },
     "shadows": [
-      { "name": "popover-ambient", "value": "0 6px 24px hsl(220 40% 4% / 0.28)", "purpose": "Menus de seleção e controles flutuantes pequenos." },
+      { "name": "popover-ambient", "value": "0 6px 24px hsl(220 40% 4% / 0.28)", "purpose": "Menus de seleçêo e controles flutuantes pequenos." },
       { "name": "floating-panel", "value": "0 12px 40px hsl(220 40% 4% / 0.3)", "purpose": "Seletor de aparência e painéis acima do chrome." },
-      { "name": "journey-edge", "value": "-12px 0 40px hsl(220 40% 4% / 0.3)", "purpose": "Separação do drawer Minha jornada." },
-      { "name": "completion-toast", "value": "0 8px 30px hsl(220 40% 4% / 0.3)", "purpose": "Feedback transitório de conclusão." },
+      { "name": "journey-edge", "value": "-12px 0 40px hsl(220 40% 4% / 0.3)", "purpose": "Separaçêo do drawer Minha jornada." },
+      { "name": "completion-toast", "value": "0 8px 30px hsl(220 40% 4% / 0.3)", "purpose": "Feedback transitório de conclusêo." },
       { "name": "operational-glow", "value": "0 0 18px rgba(56, 189, 248, 0.35)", "purpose": "Linha de varredura e sinais técnicos ativos." }
     ],
     "motion": [
@@ -141,7 +141,7 @@
       "name": "Primary Decision Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "A ação decisiva da página; use uma por contexto imediato.",
+      "description": "A açêo decisiva da página; use uma por contexto imediato.",
       "html": "<button class=\"ds-btn-primary\">Analisar meu site <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"/></svg></button>",
       "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.875rem 1.5rem;border:0;border-radius:.75rem;background:var(--wm-amber,#facc15);color:#111827;font:700 .875rem/1.35 Inter,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color 180ms cubic-bezier(.4,0,.2,1),filter 180ms cubic-bezier(.4,0,.2,1)}.ds-btn-primary svg{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:2}.ds-btn-primary:hover{background:#fde047}.ds-btn-primary:focus-visible{outline:3px solid var(--wm-cyan,#38bdf8);outline-offset:2px}.ds-btn-primary:active{filter:brightness(.96)}"
     },
@@ -149,7 +149,7 @@
       "name": "Secondary Surface Button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Ação secundária sóbria, construída com superfície e borda.",
+      "description": "Açêo secundária sóbria, construída com superfície e borda.",
       "html": "<button class=\"ds-btn-secondary\">Explorar as quatro fases</button>",
       "css": ".ds-btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:.875rem 1.5rem;border:1px solid var(--wm-line,#374151);border-radius:.75rem;background:var(--wm-panel,#1f2937);color:#e6e6e6;font:600 .875rem/1.35 Inter,ui-sans-serif,system-ui,sans-serif;cursor:pointer;transition:background-color 180ms cubic-bezier(.4,0,.2,1),border-color 180ms cubic-bezier(.4,0,.2,1)}.ds-btn-secondary:hover{background:#374151;border-color:#4b5563}.ds-btn-secondary:focus-visible{outline:3px solid var(--wm-cyan,#38bdf8);outline-offset:2px}.ds-btn-secondary:active{background:#2d3748}"
     },
@@ -164,7 +164,7 @@
     {
       "name": "Phase Navigation",
       "kind": "nav",
-      "description": "Navegação compacta com cada fase revelando sua cor semântica.",
+      "description": "Navegaçêo compacta com cada fase revelando sua cor semântica.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Fases\"><a class=\"ds-nav-link ds-nav-builder\" href=\"#\">Builder</a><a class=\"ds-nav-link ds-nav-integrator\" href=\"#\">Integrator</a><a class=\"ds-nav-link ds-nav-agent\" href=\"#\">Agent</a><a class=\"ds-nav-link ds-nav-expert\" href=\"#\">Expert</a></nav>",
       "css": ".ds-nav{display:flex;align-items:center;gap:.25rem;padding:.5rem;border-bottom:1px solid var(--wm-line,#374151);background:rgba(17,24,39,.95);font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-nav-link{padding:.5rem .75rem;border-radius:.5rem;color:#a8a8b3;text-decoration:none;font-size:.875rem;font-weight:600;transition:color 180ms cubic-bezier(.4,0,.2,1),background-color 180ms cubic-bezier(.4,0,.2,1)}.ds-nav-builder:hover{color:#34d399;background:rgba(52,211,153,.1)}.ds-nav-integrator:hover{color:#60a5fa;background:rgba(96,165,250,.1)}.ds-nav-agent:hover{color:#c084fc;background:rgba(192,132,252,.1)}.ds-nav-expert:hover{color:#fbbf24;background:rgba(251,191,36,.1)}.ds-nav-link:focus-visible{outline:3px solid var(--wm-cyan,#38bdf8);outline-offset:2px}.ds-nav-link:active{background:#374151}"
     },
@@ -172,7 +172,7 @@
       "name": "Technical Phase Card",
       "kind": "card",
       "refersTo": "card-technical",
-      "description": "Cartão plano que conecta fase, escopo e entrega executável.",
+      "description": "Cartêo plano que conecta fase, escopo e entrega executável.",
       "html": "<article class=\"ds-phase-card\"><div class=\"ds-phase-head\"><h3>WebMCP Builder</h3><span>Módulos 1–4</span></div><p>Instrumente formulários e funções JavaScript sem quebrar a experiência humana.</p><strong>Entrega: site com ferramentas descobertas e executáveis.</strong></article>",
       "css": ".ds-phase-card{max-width:34rem;padding:1.5rem;border:1px solid var(--wm-line,#374151);border-radius:.75rem;background:var(--wm-panel,#1f2937);color:#e6e6e6;font-family:Inter,ui-sans-serif,system-ui,sans-serif;transition:border-color 180ms cubic-bezier(.4,0,.2,1)}.ds-phase-card:hover{border-color:#4b5563}.ds-phase-card:focus-within{outline:3px solid var(--wm-cyan,#38bdf8);outline-offset:2px}.ds-phase-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem}.ds-phase-head h3{margin:0;font-size:1.5rem;line-height:1.25}.ds-phase-head span,.ds-phase-card strong{color:#34d399;font-size:.875rem}.ds-phase-card p{margin:.75rem 0 1.25rem;color:#a8a8b3;line-height:1.6}.ds-phase-card strong{display:block;font-weight:500}"
     },
@@ -181,7 +181,7 @@
       "kind": "custom",
       "refersTo": "panel-diagram",
       "description": "Painel operacional que mantém o estado do diagnóstico visível.",
-      "html": "<section class=\"ds-report\"><header><span class=\"ds-report-dot\"></span><strong>Relatório de prontidão</strong><small>modo passivo</small></header><div class=\"ds-report-body\"><h3>O relatório aparecerá aqui.</h3><p>Ferramentas, bloqueadores, evidências e recomendações serão organizados neste painel.</p></div></section>",
+      "html": "<section class=\"ds-report\"><header><span class=\"ds-report-dot\"></span><strong>Relatório de prontidêo</strong><small>modo passivo</small></header><div class=\"ds-report-body\"><h3>O relatório aparecerá aqui.</h3><p>Ferramentas, bloqueadores, evidências e recomendações serêo organizados neste painel.</p></div></section>",
       "css": ".ds-report{min-height:20rem;overflow:hidden;border:1px solid var(--wm-line,#374151);border-radius:1rem;background:var(--wm-panel,#1f2937);color:#e6e6e6;font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-report header{display:flex;align-items:center;gap:.5rem;padding:1rem 1.25rem;border-bottom:1px solid var(--wm-line,#374151)}.ds-report header small{margin-left:auto;color:#a8a8b3}.ds-report-dot{width:.5rem;height:.5rem;border-radius:9999px;background:var(--wm-cyan,#38bdf8)}.ds-report-body{padding:2rem}.ds-report-body h3{margin:0 0 .75rem;font-size:1.5rem}.ds-report-body p{max-width:32rem;margin:0;color:#a8a8b3;line-height:1.6}.ds-report:hover{border-color:#4b5563}.ds-report:focus-within{outline:3px solid var(--wm-cyan,#38bdf8);outline-offset:2px}"
     },
     {
@@ -194,46 +194,46 @@
     {
       "name": "Learning Progress Meter",
       "kind": "custom",
-      "description": "Progresso sóbrio que sempre combina fração, porcentagem e barra.",
+      "description": "Progresso sóbrio que sempre combina fraçêo, porcentagem e barra.",
       "html": "<div class=\"ds-meter\" role=\"progressbar\" aria-valuenow=\"42\" aria-valuemin=\"0\" aria-valuemax=\"100\"><div class=\"ds-meter-label\"><span>Sua jornada</span><strong>40 de 96 · 42%</strong></div><div class=\"ds-meter-track\"><span></span></div></div>",
       "css": ".ds-meter{max-width:32rem;color:#e6e6e6;font-family:Inter,ui-sans-serif,system-ui,sans-serif}.ds-meter-label{display:flex;justify-content:space-between;gap:1rem;margin-bottom:.5rem;color:#a8a8b3;font-size:.875rem}.ds-meter-label strong{color:#e6e6e6}.ds-meter-track{width:100%;height:.5rem;overflow:hidden;border-radius:9999px;background:#374151}.ds-meter-track span{display:block;width:42%;height:100%;border-radius:inherit;background:#34d399;transition:width 320ms cubic-bezier(.4,0,.2,1)}.ds-meter:focus-within{outline:3px solid var(--wm-cyan,#38bdf8);outline-offset:2px}"
     }
   ],
   "narrative": {
     "northStar": "A Bancada de Evidências",
-    "overview": "O sistema visual trata a formação como uma bancada técnica em operação: superfícies escuras e sóbrias organizam evidências, linhas finas mostram relações e diagramas SVG explicam o mecanismo antes de qualquer promessa. A interface é direta, profissional e densa o bastante para transmitir rigor, sem se transformar em painel corporativo genérico.\n\nO mundo é o formato-curso-v2 da INEMA: dark-first, Inter, âmbar para decisões e ciano para fluxo, leitura e diagnóstico. A landing e o Readiness pertencem ao mesmo sistema, mas expressam modos diferentes — a primeira orienta a jornada; o segundo funciona como ferramenta operacional. A camada de aprendizagem atravessa ambos com progresso portátil, preferências de leitura, temas claro, sépia, foco e alto contraste, além do painel “Minha jornada”.",
+    "overview": "O sistema visual trata a formaçêo como uma bancada técnica em operaçêo: superfícies escuras e sóbrias organizam evidências, linhas finas mostram relações e diagramas SVG explicam o mecanismo antes de qualquer promessa. A interface é direta, profissional e densa o bastante para transmitir rigor, sem se transformar em painel corporativo genérico.\n\nO mundo é o formato-curso-v2 da INEMA: dark-first, Inter, âmbar para decisões e ciano para fluxo, leitura e diagnóstico. A landing e o Readiness pertencem ao mesmo sistema, mas expressam modos diferentes — a primeira orienta a jornada; o segundo funciona como ferramenta operacional. A camada de aprendizagem atravessa ambos com progresso portátil, preferências de leitura, temas claro, sépia, foco e alto contraste, além do painel “Minha jornada”.",
     "keyCharacteristics": [
       "Dark-first com superfícies técnicas planas e bordas visíveis.",
       "Âmbar raro e decisivo; ciano recorrente e operacional.",
-      "Diagramas SVG lineares como explicação funcional, nunca ilustração decorativa.",
+      "Diagramas SVG lineares como explicaçêo funcional, nunca ilustraçêo decorativa.",
       "Hierarquia tipográfica compacta, pesada nos títulos e confortável na leitura.",
-      "Estados comunicados por texto, ícone e estrutura, não apenas por cor.",
-      "Aprendizagem sem gamificação manipulativa: progresso, dúvida, anotação e continuidade."
+      "Estados comunicados por texto, ícone e estrutura, nêo apenas por cor.",
+      "Aprendizagem sem gamificaçêo manipulativa: progresso, dúvida, anotaçêo e continuidade."
     ],
     "rules": [
-      { "name": "The Decision/Flow Rule", "body": "Âmbar responde “o que faço agora”; ciano responde “o que está acontecendo”. Não troque essas funções.", "section": "colors" },
-      { "name": "The Meaningful Color Rule", "body": "Cores de trilha, sucesso, atenção e falha só aparecem ligadas a uma categoria ou estado explícito.", "section": "colors" },
-      { "name": "The Theme Integrity Rule", "body": "Temas sépia e contraste recolorem o chrome inteiro por tokens semânticos; foco altera medida e densidade, não inventa outra paleta.", "section": "colors" },
-      { "name": "The One-Family Rule", "body": "Use peso, tamanho e espaçamento para hierarquia; não introduza uma fonte de display concorrente.", "section": "typography" },
+      { "name": "The Decision/Flow Rule", "body": "Âmbar responde “o que faço agora”; ciano responde “o que está acontecendo”. Nêo troque essas funções.", "section": "colors" },
+      { "name": "The Meaningful Color Rule", "body": "Cores de trilha, sucesso, atençêo e falha só aparecem ligadas a uma categoria ou estado explícito.", "section": "colors" },
+      { "name": "The Theme Integrity Rule", "body": "Temas sépia e contraste recolorem o chrome inteiro por tokens semânticos; foco altera medida e densidade, nêo inventa outra paleta.", "section": "colors" },
+      { "name": "The One-Family Rule", "body": "Use peso, tamanho e espaçamento para hierarquia; nêo introduza uma fonte de display concorrente.", "section": "typography" },
       { "name": "The Reading Measure Rule", "body": "Limite apenas a prosa; código, tabelas, grades e diagramas permanecem full-width dentro do contêiner.", "section": "typography" },
-      { "name": "The Mechanism-in-View Rule", "body": "Em superfícies de entrada, mantenha a ação e sua explicação visual ou estado operacional visíveis antes do primeiro scroll em desktop.", "section": "layout" },
+      { "name": "The Mechanism-in-View Rule", "body": "Em superfícies de entrada, mantenha a açêo e sua explicaçêo visual ou estado operacional visíveis antes do primeiro scroll em desktop.", "section": "layout" },
       { "name": "The Structural Depth Rule", "body": "Use tom e borda para conteúdo em repouso; use sombra apenas quando um elemento flutua sobre outro.", "section": "elevation" },
-      { "name": "The Radius by Scale Rule", "body": "Quanto maior o contêiner, maior o raio; não transforme todos os elementos em pílulas.", "section": "shapes" }
+      { "name": "The Radius by Scale Rule", "body": "Quanto maior o contêiner, maior o raio; nêo transforme todos os elementos em pílulas.", "section": "shapes" }
     ],
     "dos": [
-      "Do reserve âmbar para a próxima decisão importante e ciano para fluxo, diagnóstico, links e foco.",
+      "Do reserve âmbar para a próxima decisêo importante e ciano para fluxo, diagnóstico, links e foco.",
       "Do construa profundidade com superfícies e bordas antes de recorrer a sombras.",
-      "Do use SVG técnico quando uma relação, sequência ou arquitetura precisa ser entendida rapidamente.",
-      "Do preserve o conteúdo e a operação sem JavaScript; recursos de aprendizagem são progressive enhancement.",
+      "Do use SVG técnico quando uma relaçêo, sequência ou arquitetura precisa ser entendida rapidamente.",
+      "Do preserve o conteúdo e a operaçêo sem JavaScript; recursos de aprendizagem sêo progressive enhancement.",
       "Do comunique estados com texto, ícone e estrutura, e respeite teclado, zoom e movimento reduzido.",
       "Do mantenha os temas claro, sépia, foco e contraste como expressões completas do mesmo sistema."
     ],
     "donts": [
-      "Don't transforme a formação em landing genérica de promessas, métricas decorativas ou gamificação manipulativa.",
+      "Don't transforme a formaçêo em landing genérica de promessas, métricas decorativas ou gamificaçêo manipulativa.",
       "Don't use âmbar como acento indiscriminado nem ciano como CTA primário por hábito.",
       "Don't aplique sombras pesadas a cartões em repouso, vidro excessivo ou gradientes decorativos no tema claro.",
-      "Don't introduza fotografia genérica, ilustração figurativa ou uma segunda fonte de display.",
-      "Don't use animação com bounce, scale ou translate em hover; movimento deve indicar varredura, entrada de resultado ou mudança de estado.",
+      "Don't introduza fotografia genérica, ilustraçêo figurativa ou uma segunda fonte de display.",
+      "Don't use animaçêo com bounce, scale ou translate em hover; movimento deve indicar varredura, entrada de resultado ou mudança de estado.",
       "Don't esconder foco, depender apenas de cor ou limitar tabelas, código e diagramas à medida estreita da prosa."
     ]
   }

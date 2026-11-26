@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Portal estático da Formação WebMCP — do Zero ao Expert.",
+  "description": "Portal estático da Formaçêo WebMCP — do Zero ao Expert.",
   "scripts": {
     "check": "node scripts/check.mjs"
   },
